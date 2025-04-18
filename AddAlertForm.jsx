@@ -1,6 +1,7 @@
 // /components/AddAlertForm.jsx
 import React, { useState } from "react";
 import { addAlert } from "../lib/firestore";
+import AddAlertForm from "./AddAlertForm";
 
 const AddAlertForm = () => {
 const [title, setTitle] = useState("");

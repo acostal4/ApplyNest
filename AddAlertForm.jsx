@@ -1,8 +1,3 @@
-
-Luis Acosta <luisacostaf4@gmail.com>
-12:52 AM (0 minutes ago)
-to me
-
 // /components/AddAlertForm.jsx
 import React, { useState } from "react";
 import { addAlert } from "../lib/firestore";

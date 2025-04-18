@@ -1,82 +1,157 @@
-/* Base settings */
+/* Global Styles */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Roboto', sans-serif;
+}
+
 body {
-  font-family: 'Inter', sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f9fafa;
-  color: #333;
-  line-height: 1.6;
+background-color: #f4f7fc;
+color: #333;
+line-height: 1.6;
+font-size: 16px;
 }
 
-/* Header styling */
-header {
-  text-align: center;
-  padding: 3rem 1rem;
-  background: #ffffff;
-}
-h1 {
-  font-size: 2.5rem;
-  color: #0b7285; /* teal accent */
-  margin-bottom: 0.5rem;
-}
-.tagline {
-  font-size: 1.1rem;
-  color: #555;
+/* Container */
+.container {
+max-width: 1200px;
+margin: 0 auto;
+padding: 20px;
 }
 
-/* Features section */
-.features {
-  max-width: 700px;
-  margin: 2rem auto;
-  padding: 1rem;
-  text-align: center;
-}
-.features ul {
-  list-style: none;
-  padding: 0;
-}
-.features li {
-  margin-bottom: 1rem;
-  font-size: 1.1rem;
+/* Flexbox Grid */
+.flex {
+display: flex;
+justify-content: space-between;
+flex-wrap: wrap;
 }
 
-/* Waitlist form */
-.waitlist {
-  background: #e3f2fd; /* light blue */
-  padding: 2rem 1rem;
-  text-align: center;
+.flex-column {
+display: flex;
+flex-direction: column;
+gap: 10px;
 }
-.waitlist h2 {
-  color: #0b7285;
+
+/* Heading Styles */
+h1, h2, h3 {
+color: #1d2d44;
+font-weight: 600;
 }
-form {
-  margin-top: 1rem;
-}
-input[type="email"] {
-  padding: 0.7rem;
-  width: 250px;
-  max-width: 90%;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
+
+/* Buttons */
 button {
-  padding: 0.7rem 1.2rem;
-  background: #0b7285;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  margin-left: 0.5rem;
-  cursor: pointer;
-  font-weight: 600;
-}
-button:hover {
-  background: #08657a;
+background-color: #0085ff;
+color: #fff;
+border: none;
+padding: 10px 20px;
+border-radius: 5px;
+cursor: pointer;
+transition: background-color 0.3s ease;
 }
 
-/* Footer */
-footer {
-  text-align: center;
-  padding: 1rem;
-  font-size: 0.9rem;
-  color: #888;
+button:hover {
+background-color: #0069d9;
+}
+
+/* Alerts */
+.alert {
+background-color: #f8d7da;
+color: #721c24;
+padding: 10px;
+border-radius: 5px;
+margin-top: 20px;
+}
+
+.alert.success {
+background-color: #d4edda;
+color: #155724;
+}
+
+.alert.info {
+background-color: #cce5ff;
+color: #004085;
+}
+
+/* Form Elements */
+input[type="text"], input[type="email"], select, textarea {
+width: 100%;
+padding: 12px 20px;
+border: 1px solid #ccc;
+border-radius: 5px;
+margin-bottom: 20px;
+font-size: 16px;
+}
+
+input[type="submit"] {
+background-color: #28a745;
+color: #fff;
+border: none;
+padding: 12px 20px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+input[type="submit"]:hover {
+background-color: #218838;
+}
+
+/* Cards */
+.card {
+background-color: #fff;
+padding: 20px;
+border-radius: 10px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+transform: translateY(-10px);
+box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Alerts Section */
+.alert-section {
+margin-top: 40px;
+}
+
+.alert-card {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+margin-bottom: 20px;
+}
+
+.alert-card h3 {
+margin-bottom: 10px;
+}
+
+.alert-card p {
+color: #777;
+}
+
+.alert-card button {
+background-color: #dc3545;
+color: white;
+border: none;
+padding: 8px 16px;
+border-radius: 5px;
+cursor: pointer;
+}
+
+.alert-card button:hover {
+background-color: #c82333;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+.flex {
+flex-direction: column;
+}
+
+.container {
+padding: 15px;
+}
 }

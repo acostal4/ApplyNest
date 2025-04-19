@@ -1,5 +1,9 @@
 import { useState } from 'react';
 import Navbar from './components/Navbar';
+import Home from './components/Home';
+import AddAlert from './components/AddAlert';
+import JobAlerts from './components/JobAlerts';
+import Profile from './components/Profile';
 
 const App = () => {
 const [page, setPage] = useState('home');
@@ -7,15 +11,15 @@ const [page, setPage] = useState('home');
 const renderPage = () => {
 switch (page) {
 case 'home':
-return <div>Welcome to ApplyNest!</div>;
+return <Home />;
 case 'add':
-return <div>This is the Add Alert page.</div>;
+return <AddAlert />;
 case 'alerts':
-return <div>Here are your Job Alerts.</div>;
+return <JobAlerts />;
 case 'profile':
-return <div>This is your Profile page.</div>;
+return <Profile />;
 default:
-return <div>Welcome to ApplyNest!</div>;
+return <Home />;
 }
 };
 
@@ -28,5 +32,3 @@ return (
 </div>
 );
 };
-
-export default App;
